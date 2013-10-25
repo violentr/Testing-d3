@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025172946) do
+ActiveRecord::Schema.define(version: 20131025184805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sections", force: true do |t|
+    t.text     "section_name"
+    t.integer  "wheel_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sections", ["wheel_id"], name: "index_sections_on_wheel_id", using: :btree
 
   create_table "wheels", force: true do |t|
     t.datetime "created_at"
