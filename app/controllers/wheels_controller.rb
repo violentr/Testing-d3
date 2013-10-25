@@ -1,0 +1,2 @@
+class WheelsController < ApplicationController
+end

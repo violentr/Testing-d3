@@ -1,0 +1,94 @@
+  [1m[36m (274.0ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1393.9ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36m (235.7ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1579.1ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36m (215.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (20.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (21.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWheels (20131025172946)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (92.7ms)[0m  [1mCREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (10.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131025172946"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (260.3ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1656.6ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (123.4ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (856.6ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (112.9ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (957.7ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (129.3ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (453.7ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (111.6ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (427.2ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (90.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (60.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (111.3ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1434.2ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (11.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (114.1ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1301.7ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (112.3ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1125.7ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.7ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (113.9ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (571.3ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025172946')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
