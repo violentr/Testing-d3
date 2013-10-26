@@ -119,3 +119,53 @@ Processing by WheelsController#index as HTML
   Rendered wheels/index.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 185ms (Views: 153.3ms | ActiveRecord: 0.0ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (39.4ms)[0m  [1mINSERT INTO "wheels" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", Sat, 26 Oct 2013 00:08:01 UTC +00:00], ["updated_at", Sat, 26 Oct 2013 00:08:01 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/wheels" for 127.0.0.1 at 2013-10-26 01:08:01 +0100
+Processing by WheelsController#index as HTML
+  Rendered wheels/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 207ms (Views: 185.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "wheels" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", Sat, 26 Oct 2013 00:10:07 UTC +00:00], ["updated_at", Sat, 26 Oct 2013 00:10:07 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/wheels" for 127.0.0.1 at 2013-10-26 01:10:07 +0100
+Processing by WheelsController#index as HTML
+  Rendered wheels/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 414ms (Views: 396.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateQuestions (20131026001146)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (19.3ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "section_name" text, "section_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_questions_on_section_id" ON "questions" ("section_id")
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131026001146"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.7ms)[0m  [1mINSERT INTO "wheels" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", Sat, 26 Oct 2013 00:12:45 UTC +00:00], ["updated_at", Sat, 26 Oct 2013 00:12:45 UTC +00:00]]
+  [1m[35m (40.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/wheels" for 127.0.0.1 at 2013-10-26 01:12:45 +0100
+Processing by WheelsController#index as HTML
+  Rendered wheels/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 89ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
