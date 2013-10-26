@@ -169,3 +169,35 @@ Processing by WheelsController#index as HTML
   Rendered wheels/index.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 89ms (Views: 64.3ms | ActiveRecord: 0.0ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (71.4ms)[0m  [1mINSERT INTO "wheels" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", Sat, 26 Oct 2013 00:28:46 UTC +00:00], ["updated_at", Sat, 26 Oct 2013 00:28:46 UTC +00:00]]
+  [1m[35m (18.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/wheels" for 127.0.0.1 at 2013-10-26 01:28:46 +0100
+Processing by WheelsController#index as HTML
+  Rendered wheels/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 273ms (Views: 241.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateQuestions (20131026001146)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (61.3ms)[0m  DROP TABLE "questions"
+  [1m[36mSQL (46.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20131026001146'[0m
+  [1m[35m (36.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateQuestions (20131026001146)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (49.1ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "question" text, "section_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_questions_on_section_id" ON "questions" ("section_id")
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131026001146"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
