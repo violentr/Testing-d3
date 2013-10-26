@@ -241,3 +241,59 @@ Migrating to CreateQuestions (20131026001146)
   [1m[36mSQL (17.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131026001146"]]
   [1m[35m (2.4ms)[0m  COMMIT
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (141.9ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (876.5ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (23.8ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "question" text, "section_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.4ms)[0m  [1mCREATE INDEX "index_questions_on_section_id" ON "questions" USING btree ("section_id")[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "sections" ("id" serial primary key, "section_name" text, "wheel_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.0ms)[0m  [1mCREATE INDEX "index_sections_on_wheel_id" ON "sections" USING btree ("wheel_id")[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131026001146')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131025172946')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025184805')
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (123.4ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (1401.4ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "question" text, "section_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.3ms)[0m  [1mCREATE INDEX "index_questions_on_section_id" ON "questions" USING btree ("section_id")[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "sections" ("id" serial primary key, "section_name" text, "wheel_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.4ms)[0m  [1mCREATE INDEX "index_sections_on_wheel_id" ON "sections" USING btree ("wheel_id")[0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131026001146')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131025172946')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025184805')
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAnswers (20131026164659)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "answer_value" integer, "question_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE INDEX "index_answers_on_question_id" ON "answers" ("question_id")
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131026164659"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (114.4ms)[0m  [1mDROP DATABASE IF EXISTS "life_wheel_test"[0m
+  [1m[35m (381.4ms)[0m  CREATE DATABASE "life_wheel_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.4ms)[0m  CREATE TABLE "answers" ("id" serial primary key, "answer_value" integer, "question_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE INDEX "index_answers_on_question_id" ON "answers" USING btree ("question_id")[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "question" text, "section_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.0ms)[0m  [1mCREATE INDEX "index_questions_on_section_id" ON "questions" USING btree ("section_id")[0m
+  [1m[35m (5.4ms)[0m  CREATE TABLE "sections" ("id" serial primary key, "section_name" text, "wheel_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.9ms)[0m  [1mCREATE INDEX "index_sections_on_wheel_id" ON "sections" USING btree ("wheel_id")[0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131026164659')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131025172946')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131025184805')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131026001146')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
