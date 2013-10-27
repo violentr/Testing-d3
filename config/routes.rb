@@ -1,9 +1,13 @@
 LifeApp::Application.routes.draw do
+  devise_for :users
+  devise_for :models
   resources :wheels do
     resources :sections
     resources :questions
     resources :answers
   end  
+
+  root :to => "wheels#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
