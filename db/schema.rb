@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026235757) do
+ActiveRecord::Schema.define(version: 20131029134800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,20 @@ ActiveRecord::Schema.define(version: 20131026235757) do
     t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "answer_text"
+    t.integer  "wheel_id"
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
+  add_index "answers", ["wheel_id"], name: "index_answers_on_wheel_id", using: :btree
+
+  create_table "answers_wheels", force: true do |t|
+    t.integer "answer_id"
+    t.integer "wheel_id"
+  end
+
+  add_index "answers_wheels", ["answer_id"], name: "index_answers_wheels_on_answer_id", using: :btree
+  add_index "answers_wheels", ["wheel_id"], name: "index_answers_wheels_on_wheel_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.text     "question"
@@ -42,6 +53,15 @@ ActiveRecord::Schema.define(version: 20131026235757) do
   end
 
   add_index "sections", ["wheel_id"], name: "index_sections_on_wheel_id", using: :btree
+
+  create_table "selections", force: true do |t|
+    t.integer  "answer_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "selections", ["user_id"], name: "index_selections_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -64,6 +84,7 @@ ActiveRecord::Schema.define(version: 20131026235757) do
   create_table "wheels", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
 end
