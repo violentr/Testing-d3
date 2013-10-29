@@ -1,4 +1,4 @@
 class Section < ActiveRecord::Base
-  belongs_to :wheel
   has_many :questions
+  accepts_nested_attributes_for :questions
 end
