@@ -1,16 +1,12 @@
 class Question < ActiveRecord::Base
   belongs_to :section
   has_many :answers
-  accepts_nested_attributes_for :answers
+  after_create :add_default_answers
 
-  # after_create :add_answers
-
-  # def add_answers
-  # 	(1..5).each do |n|
-  # 		answers.create(answer_value: n)
-  # 	end
-  # end
-  
-
+  def add_default_answers
+  	{1=>'Strongly disagree', 2=>'Disagree', 3=>'Neither disagree nor agree', 4=>'Agree', 5=>'Strongly agree'}.each do |number, text| 
+  		answers << Answer.create(answer_value: number, answer_text: text)
+  	end
+  end
 
 end

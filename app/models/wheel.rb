@@ -1,11 +1,5 @@
 class Wheel < ActiveRecord::Base
-	has_many :answers
-	accepts_nested_attributes_for :answers
+	has_and_belongs_to_many :answers
 	belongs_to :user
-
-	def build_answers
-		answers = Answer.build_for_all_questions(self)
-	end
-
 
 end

@@ -2,18 +2,24 @@
 <h2>Please select the answer that represents you.</h2><br>
 
 <%= form_for @wheel do |f| %>
-       <%= f.fields_for :answers, @wheel.answers do |answer_f| %>
 
-	       <%= answer_f.label :answer_value do |answervalue_f| %>
-	            <%= answer_f.object.question.section.section_name %>
-	            <%= answer_f.object.question.question %>
-	            <%= answer_f.object.answer_text %>
-	            <%= "Section id: #{answer_f.object.question.section.id}" %>
-	            <%= "Question id: #{answer_f.object.question.id}" %>
-	            <%= "Answer id: #{answer_f.object.id}" %>
-	            <%= answer_f.radio_button :answer_value, :answer_value %>
-	       <% end %>
-      <% end %><br>
+<% Section.all.each do |s| %>
+  <div>
+	<h3><%= s.section_name %></h3>
+	<% s.questions.each do |q| %>
+	  <div>
+	 	<h4><%= q.question %></h4>
+	 	<% q.answers.each do |a| %>
+	 		<label>
+	 			<%= a.answer_text %>
+	 			<%= radio_button_tag "answer[#{q.id}]", a.id %>
+	 		</label><br>
+	 	<% end %>
+	  <div>
+ 	<% end %>
+ </div>
+<% end %>
+
 
   <%= f.submit "Create Wheel" %>
 

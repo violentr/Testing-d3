@@ -54,15 +54,6 @@ ActiveRecord::Schema.define(version: 20131029134800) do
 
   add_index "sections", ["wheel_id"], name: "index_sections_on_wheel_id", using: :btree
 
-  create_table "selections", force: true do |t|
-    t.integer  "answer_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "selections", ["user_id"], name: "index_selections_on_user_id", using: :btree
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

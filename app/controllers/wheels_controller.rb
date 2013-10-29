@@ -4,9 +4,8 @@ class WheelsController < ApplicationController
 	end
 
 	def new
-  	@answers = Answer.find_by_id(params[:question_id])
    	@wheel = Wheel.new
-    @wheel.build_answers
+    # @wheel.build_answers
 	end
 	
 
@@ -15,6 +14,8 @@ class WheelsController < ApplicationController
   end
 
   def create
+    @answer_ids = params[:answer].values
+
     @user = User.find_by_id(params[:user_id])
     @wheel = @user.wheels.build params[:wheel].permit(:answer_id)
 
