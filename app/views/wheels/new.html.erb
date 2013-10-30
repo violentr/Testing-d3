@@ -1,25 +1,28 @@
 <h1>"Create your wheel"</h1><br>
 <h2>Please select the answer that represents you.</h2><br>
+ 
 
 <%= form_for @wheel do |f| %>
 
-<% Section.all.each do |s| %>
-  <div>
-	<h3><%= s.section_name %></h3>
-	<% s.questions.each do |q| %>
-	  <div class='question'>
-	 	<h4><%= q.question %></h4>
-	 	<% q.answers.each do |a| %>
-	 		<label>
-	 			<%= a.answer_text %>
-	 			<%= radio_button_tag "answer[#{q.id}]", a.id %>
-	 		</label><br>
-	 	<% end %>
-	  </div>
- 	<% end %>
- </div>
-<% end %>
+<div id="accordion">
 
+	<% Section.all.each do |s| %>
+		<h3><%= s.section_name %></h3>
+		<div>
+			<% s.questions.each do |q| %>
+		  	<div class='question'>
+		 		<h4><%= q.question %></h4>
+		 		<% q.answers.each do |a| %>
+		 		<label>
+		 			<%= a.answer_text %>
+		 			<%= radio_button_tag "answer[#{q.id}]", a.id %>
+		 		</label><br>
+		 		<% end %>
+		 	 </div>
+	 		<% end %>
+	 	</div>
+	<% end %>
+</div>
 
   <%= f.submit "Create Wheel" %>
 

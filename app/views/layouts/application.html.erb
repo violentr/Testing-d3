@@ -7,7 +7,13 @@
 	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
 	<meta content="text/javascript" http-equiv="Content-Script-Type">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+ 
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
+  <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
+ 
+
 	<%= csrf_meta_tags %>
 </head>
 
@@ -23,16 +29,19 @@
 
       <div id="navheader">
 
-      		<!-- <div id="navmission">
-          	 <a href="index.html"><img src="/assets/Nav-bar-back3.png" alt="" /></a>
-        	</div> -->
-        	
-          <!-- <div id="navinspired">
-        		<a href="inspired/mission_statement_examples.html"><img src="public/images/inspired_nav.png" alt="Mission Statement Examples" width="116" height="25" /></a>
-        	</div>	 -->
+        <%= yield :nav_header %>
       </div>
 
       <div id="main">
+          
+        <% if current_user %>
+        logged in as <% current_user.email %>
+        <%end%>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
       </div>
 
      <div id="footer" class="footer-home">
@@ -44,15 +53,7 @@
         </ul>
       </div>
     	    
- 	
-<% if current_user %>
-logged in as <% current_user.email %>
-<%end%>
 
-<p class="notice"]]><%= notice %></p>
-<p class="alert"]]><%= alert %></p>
-
-<%= yield %>
 </div>
 </body>
 </html>
