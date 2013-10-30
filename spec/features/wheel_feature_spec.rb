@@ -10,22 +10,24 @@ require 'spec_helper'
 				expect(page).to have_content 'Create your wheel'	
 			end	
 
-			it 'should display sections' do
+			it 'should display a form' do
 				visit new_wheel_path
 				expect(page).to have_content 'Personal growth & development'	
 			end	
 
-			it 'should analyze results with click on "create wheel" button'  do
-				visit new_wheel_path			
-					page.all(:css, '.question').each do |q|
-						within q do
-							choose(answer_id == '1')
-						end
-					end
+
+
+			# it 'should analyze results with click on "create wheel" button'  do
+			# 	visit new_wheel_path			
+			# 		page.all(:css, '.question').each do |q|
+			# 			within q do
+			# 				choose(answer_id == '1')
+			# 			end
+			# 		end
 				
-				click_button 'Create Wheel'
-				expect(page).to have_content 'Your personal wheel'	
-			end	
+			# 	click_button 'Create Wheel'
+			# 	expect(page).to have_content 'Your personal wheel'	
+			# end	
 
 		end
 
