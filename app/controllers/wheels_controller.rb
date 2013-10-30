@@ -11,6 +11,7 @@ class WheelsController < ApplicationController
 
 	def show
     @wheel = Wheel.find(params[:id])
+    @selected_answer_values = @wheel.answers.map(&:answer_value)
   end
 
   def create
@@ -41,7 +42,6 @@ class WheelsController < ApplicationController
       end
     end
   end
-
 
 
 end
