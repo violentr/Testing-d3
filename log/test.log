@@ -7578,3 +7578,60 @@ Completed 500 Internal Server Error in 2ms
   [1m[35m (0.2ms)[0m  ROLLBACK
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWheels (20131025172946)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "wheels" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131025172946"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSections (20131025184805)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "sections" ("id" serial primary key, "section_name" text, "wheel_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE INDEX "index_sections_on_wheel_id" ON "sections" ("wheel_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131025184805"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateQuestions (20131026001146)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "question" text, "section_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE INDEX "index_questions_on_section_id" ON "questions" ("section_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131026001146"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAnswers (20131026164659)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "answer_value" integer, "question_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE INDEX "index_answers_on_question_id" ON "answers" ("question_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131026164659"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20131026235757)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131026235757"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddUserIdToWheels (20131028164659)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "wheels" ADD COLUMN "user_id" integer
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131028164659"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateAnswersWheels (20131029094726)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "answers_wheels" ("id" serial primary key, "answer_id" integer, "wheel_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_answers_wheels_on_answer_id" ON "answers_wheels" ("answer_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "index_answers_wheels_on_wheel_id" ON "answers_wheels" ("wheel_id")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131029094726"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddAnswertextToAnswer (20131029115355)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "answers" ADD COLUMN "answer_text" character varying(255)
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131029115355"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddWheelIdToAnswers (20131029134800)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "answers" ADD COLUMN "wheel_id" integer
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_answers_on_wheel_id" ON "answers" ("wheel_id")[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131029134800"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

@@ -1,4 +1,5 @@
 LifeApp::Application.routes.draw do
+  get "static/homepage"
   devise_for :users
   resources :wheels do
     resources :sections
@@ -6,7 +7,7 @@ LifeApp::Application.routes.draw do
     resources :answers
   end  
 
-  root :to => "wheels#index"
+  root :to => "static#homepage"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
