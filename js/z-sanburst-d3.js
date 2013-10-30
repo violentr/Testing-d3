@@ -14,7 +14,7 @@ var color = d3.scale.category20c();
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
-  .append("g")
+    .append("g")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 
 var partition = d3.layout.partition()
@@ -36,8 +36,9 @@ d3.json("flare.json", function(error, root) {
 
   function click(d) {
     console.log(d.name);
+    alert(d.name);
     path.transition()
-      .duration(750)
+      .duration(2050)
       .attrTween("d", arcTween(inner_child(d)));
   }
 });
