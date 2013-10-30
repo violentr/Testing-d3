@@ -1,3 +1,14 @@
 "Your personal wheel"
 
-<%= @selected_answer_values %>
+<%= @selected_answer_values %><br>
+<%= @selected_answer_id %><br>
+
+
+
+<% Section.all.each do |s| %>
+			<% s.questions.each do |q| %>
+		 		<% q.answers.each do |a| %>
+		 			<%= a.inspect  %>
+		 		<% end %>
+		 	<% end %>
+<% end %>
