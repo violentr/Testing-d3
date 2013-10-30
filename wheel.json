@@ -1,0 +1,13 @@
+{
+ "name": "wheel of life", "colour":"#ABC",
+   "children": [
+      {"colour":"#00F", "name": "Personal growth & development", "size": 0.8},
+      {"colour":"#F00", "name": "Health, nutrition & exercise", "size": 0.2},
+      {"colour":"#0F0", "name": "Money & finances", "size": 0.1},
+      {"colour":"#FDD", "name": "Work & career", "size": 0.4},
+      {"colour":"#0FF", "name": "Home environment", "size": 0.1},
+      {"colour":"#FAF", "name": "Partner & relationships", "size": 0.5},
+      {"colour":"#000", "name": "Family & friends", "size": 0.3},
+      {"colour":"#FFF", "name": "Fun, recreation & relaxation", "size": 0.35}
+    ]
+}

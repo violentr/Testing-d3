@@ -1,16 +1,16 @@
 {
- "name": "flare",
+ "name": "wheel of life",
    "children": [
-    {"name": "Personal growth & development", "size": 1, "children": [
-      {"name": "Personal growth & development", "size": 1, "children": [
-        {"name": "Personal growth & development", "size": 1, "children": [
-          {"name": "Personal growth & development", "size": 1,"children": [
-            {"name": "Personal growth & development", "size": 1, "children": [
-              {"name": "Personal growth & development", "size": 1, "children": [
-                {"name": "PPersonal growth & development", "size": 1, "children": [
-                  {"name": "Personal growth & development", "size": 1, "children": [
-                   {"name": "Personal growth & development", "size": 1, "children": [
-                      {"name": "PPersonal growth & development", "size": 1}
+    {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+      {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+        {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+          {"colour":"#00F", "name": "Personal growth & development", "size": 1,"children": [
+            {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+              {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+                {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Personal growth & development", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Personal growth & development", "size": 1}
                     ]}
                   ]}   
                 ]}
@@ -20,17 +20,16 @@
         ]}
       ]}
     ] },
-
-    {"name": "Family", "size": 1, "children": [
-      {"name": "Health, nutrition & exercise", "size": 1, "children": [
-        {"name": "Health, nutrition & exercise", "size": 1, "children": [
-          {"name": "Health, nutrition & exercise", "size": 1,"children": [
-            {"name": "Health, nutrition & exercise", "size": 1, "children": [
-              {"name": "Health, nutrition & exercise", "size": 1, "children": [
-                {"name": "Health, nutrition & exercise", "size": 1, "children": [
-                  {"name": "Health, nutrition & exercise", "size": 1, "children": [
-                   {"name": "Health, nutrition & exercise", "size": 1, "children": [
-                      {"name": "Health, nutrition & exercise", "size": 1}
+    {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+      {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+        {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+          {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1,"children": [
+            {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+              {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+                {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Health, nutrition & exercise", "size": 1}
                    ]}
                   ]}   
                 ]}
@@ -40,16 +39,16 @@
         ]}
       ]}
     ]},
-    {"name": "Money & finances", "size": 1, "children": [
-      {"name": "Money & finances", "size": 1, "children": [
-        {"name": "Money & finances", "size": 1, "children": [
-          {"name": "Money & finances", "size": 1,"children": [
-            {"name": "Money & finances", "size": 1, "children": [
-              {"name": "Money & finances", "size": 1, "children": [
-                {"name": "Money & finances", "size": 1, "children": [
-                  {"name": "Money & finances", "size": 1, "children": [
-                   {"name": "Money & finances", "size": 1, "children": [
-                      {"name": "Money & finances", "size": 1}
+    {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+      {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+        {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+          {"colour":"#00F", "name": "Money & finances", "size": 1,"children": [
+            {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+              {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+                {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Money & finances", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Money & finances", "size": 1}
                     ]}
                   ]}   
                 ]}
@@ -59,16 +58,26 @@
         ]}
       ]}
     ]},
-    {"name": "Work & career", "size": 1,"children": [
-      {"name": "Work & career", "size": 1, "children": [
-        {"name": "Work & career", "size": 1, "children": [
-          {"name": "Work & career", "size": 1,"children": [
-            {"name": "Work & career", "size": 1, "children": [
-              {"name": "Work & career", "size": 1, "children": [
-                {"name": "Work & career", "size": 1, "children": [
-                  {"name": "Work & career", "size": 1, "children": [
-                   {"name": "Work & career", "size": 1, "children": [
-                      {"name": "Work & career", "size": 1}
+    {"colour":"#00F", "name": "Work & career", "size": 1,"children": [
+      {"colour":"#00F", "name": "Work & career", "size": 1, "children": [
+      
+                  {"colour":"#00F", "name": "Work & career", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Work & career", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Work & career", "size": 1}
+                    ]}
+                  ]}   
+     ]}
+    ]},
+    {"colour":"#00F", "name": "Home environment", "size": 1,"children": [
+      {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+        {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+          {"colour":"#00F", "name": "Home environment", "size": 1,"children": [
+            {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+              {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+                {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Home environment", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Home environment", "size": 1}
                     ]}
                   ]}   
                 ]}
@@ -78,16 +87,16 @@
         ]}
       ]}
     ]},
-    {"name": "Home environment", "size": 1,"children": [
-      {"name": "Home environment", "size": 1, "children": [
-        {"name": "Home environment", "size": 1, "children": [
-          {"name": "Home environment", "size": 1,"children": [
-            {"name": "Home environment", "size": 1, "children": [
-              {"name": "Home environment", "size": 1, "children": [
-                {"name": "Home environment", "size": 1, "children": [
-                  {"name": "Home environment", "size": 1, "children": [
-                   {"name": "Home environment", "size": 1, "children": [
-                      {"name": "Home environment", "size": 1}
+    {"colour":"#00F", "name": "Partner & relationships", "size": 1,"children": [
+      {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+        {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+          {"colour":"#00F", "name": "Partner & relationships", "size": 1,"children": [
+            {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+              {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+                {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+                    {"colour":"#00F", "name": "Partner & relationships", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Partner & relationships", "size": 1}
                     ]}
                   ]}   
                 ]}
@@ -97,59 +106,32 @@
         ]}
       ]}
     ]},
-    {"name": "Partner & relationships", "size": 1,"children": [
-      {"name": "Partner & relationships", "size": 1, "children": [
-        {"name": "Partner & relationships", "size": 1, "children": [
-          {"name": "Partner & relationships", "size": 1,"children": [
-            {"name": "Partner & relationships", "size": 1, "children": [
-              {"name": "Partner & relationships", "size": 1, "children": [
-                {"name": "Partner & relationships", "size": 1, "children": [
-                  {"name": "Partner & relationships", "size": 1, "children": [
-                    {"name": "Partner & relationships", "size": 1, "children": [
-                      {"name": "Partner & relationships", "size": 1}
+    {"colour":"#00F", "name": "Family & friends", "size": 1,"children": [
+      {"colour":"#00F", "name": "Family & friends", "size": 1, "children": [
+              {"colour":"#00F", "name": "Family & friends", "size": 1, "children": [
+                {"colour":"#00F", "name": "Family & friends", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Family & friends", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Family & friends", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Family & friends", "size": 1}
                     ]}
                   ]}   
                 ]}
               ]}
-            ]}
-          ]}
-        ]}
       ]}
     ]},
-    {"name": "Family & friends", "size": 1,"children": [
-      {"name": "Family & friends", "size": 1, "children": [
-        {"name": "Family & friends", "size": 1, "children": [
-          {"name": "Family & friends", "size": 1,"children": [
-            {"name": "Family & friends", "size": 1, "children": [
-              {"name": "Family & friends", "size": 1, "children": [
-                {"name": "Family & friends", "size": 1, "children": [
-                  {"name": "Family & friends", "size": 1, "children": [
-                   {"name": "Family & friends", "size": 1, "children": [
-                      {"name": "Family & friends", "size": 1}
+    {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+      {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+        {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+            {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+              {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+                {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+                  {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+                   {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1, "children": [
+                      {"colour":"#00F", "name": "Fun, recreation & relaxation", "size": 1}
                     ]}
                   ]}   
                 ]}
               ]}
-            ]}
-          ]}
-        ]}
-      ]}
-    ]},
-    {"name": "Fun, recreation & relaxation", "size": 1,"children": [
-      {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-        {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-          {"name": "Fun, recreation & relaxation", "size": 1,"children": [
-            {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-              {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-                {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-                  {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-                   {"name": "Fun, recreation & relaxation", "size": 1, "children": [
-                      {"name": "Fun, recreation & relaxation", "size": 1}
-                    ]}
-                  ]}   
-                ]}
-              ]}
-            ]}
           ]}
         ]}
       ]}

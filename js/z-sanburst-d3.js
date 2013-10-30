@@ -6,7 +6,7 @@ var width = 960,
 var x = d3.scale.linear()
     .range([0, 2 * Math.PI]);
 
-var y = d3.scale.sqrt()
+var y = d3.scale.linear()
     .range([0, radius]);
 
 var color = d3.scale.category20c();
@@ -15,7 +15,7 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ")");
+    .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 
 var partition = d3.layout.partition()
     .value(function(d) { return d.size; });
@@ -35,11 +35,22 @@ d3.json("flare.json", function(error, root) {
       .on("click", click);
 
   function click(d) {
+    console.log(d.name);
     path.transition()
       .duration(750)
-      .attrTween("d", arcTween(d));
+      .attrTween("d", arcTween(inner_child(d)));
   }
 });
+
+function inner_child(d){
+  var node = d;
+  var child_of_node = d;
+  while(node.parent){
+    child_of_node = node;
+    node = node.parent;
+  }
+  return child_of_node;
+}
 
 d3.select(self.frameElement).style("height", height + "px");
 
