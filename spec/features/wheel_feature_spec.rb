@@ -15,19 +15,23 @@ require 'spec_helper'
 				expect(page).to have_content 'Personal growth & development'	
 			end	
 
-
-
-			# it 'should analyze results with click on "create wheel" button'  do
-			# 	visit new_wheel_path			
-			# 		page.all(:css, '.question').each do |q|
-			# 			within q do
-			# 				choose(answer_id == '1')
-			# 			end
-			# 		end
+			it 'should show the wheel with click on "create wheel" button'  do
+				visit new_wheel_path			
+					page.all(:css, '.question').each do |q|
+						within q do
+							choose 'Strongly agree'
+						end
+					end
 				
-			# 	click_button 'Create Wheel'
-			# 	expect(page).to have_content 'Your personal wheel'	
-			# end	
+				click_button 'Create Wheel'
+				expect(page).to have_content 'Your personal wheel'	
+			end	
+
+			it 'should raise an error if the user has not selected an answer for every question'  do
+				visit new_wheel_path			
+				click_button 'Create Wheel'
+				expect(page).to have_content 'Please fill out all the answers'	
+			end	
 
 		end
 

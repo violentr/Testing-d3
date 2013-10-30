@@ -14,11 +14,10 @@ class WheelsController < ApplicationController
   end
 
   def create
-
     @wheel = Wheel.new
 
     # raise params[:answer].inspect
-    if params[:answer].nil? || (params[:answer].length < Answer.all.count)
+    if params[:answer].nil? || (params[:answer].length < Question.all.count)
       flash[:error] = 'Please fill out all the answers'
       render 'new'
     else
