@@ -7,7 +7,7 @@
   <div>
 	<h3><%= s.section_name %></h3>
 	<% s.questions.each do |q| %>
-	  <div>
+	  <div class='question'>
 	 	<h4><%= q.question %></h4>
 	 	<% q.answers.each do |a| %>
 	 		<label>
@@ -15,7 +15,7 @@
 	 			<%= radio_button_tag "answer[#{q.id}]", a.id %>
 	 		</label><br>
 	 	<% end %>
-	  <div>
+	  </div>
  	<% end %>
  </div>
 <% end %>
