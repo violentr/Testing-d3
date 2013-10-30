@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LifeApp</title>
+	<title>360 Life - Your Personal Life Balance Well-Being Tool</title>
+	<!-- <link REL="stylesheet" type="text/css" href="public/styles/style.css">
+	<link REL="stylesheet" type="text/css" href="public/styles/reset.css"> -->
+	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+	<meta content="text/javascript" http-equiv="Content-Script-Type">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<%= csrf_meta_tags %>
 </head>
+
 <body>
+
+<!-- BEGIN: Main Page -->
+	<div id="container">
+
+		<!-- BEGIN: Header -->
+    	<div id="logo">
+    		Logo goes here
+    	</div>
+
+      <div id="navheader">
+
+      		<!-- <div id="navmission">
+          	 <a href="index.html"><img src="/assets/Nav-bar-back3.png" alt="" /></a>
+        	</div> -->
+        	
+          <!-- <div id="navinspired">
+        		<a href="inspired/mission_statement_examples.html"><img src="public/images/inspired_nav.png" alt="Mission Statement Examples" width="116" height="25" /></a>
+        	</div>	 -->
+      </div>
+
+      <div id="main">
+      </div>
+
+     <div id="footer" class="footer-home">
+        <ul id="inside_nav">
+          <li><a href="share.html">Share This Site</a> | </li>
+          <li><a target="_blank" href="../terms-of-use.html">Terms</a> | </li>
+          <li><a target="_blank" href="../franklincovey-privacy-policy.html">Privacy</a> | </li>
+          <li><a target="_blank" href="../office.html">Contact Us</a></li>
+        </ul>
+      </div>
+    	    
  	
 <% if current_user %>
 logged in as <% current_user.email %>
@@ -16,6 +53,6 @@ logged in as <% current_user.email %>
 <p class="alert"]]><%= alert %></p>
 
 <%= yield %>
-
+</div>
 </body>
 </html>
