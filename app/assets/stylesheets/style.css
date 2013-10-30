@@ -667,3 +667,9 @@ br {
 }
 
 
+.answer_radio {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 40px 50px 0px;
+}

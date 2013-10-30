@@ -2030,3 +2030,885 @@ ActionController::RoutingError (No route matches [GET] "/office.html"):
   Rendered /Users/lorrainephillips/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
   Rendered /Users/lorrainephillips/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
   Rendered /Users/lorrainephillips/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (55.1ms)
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+Processing by WheelsController#new as HTML
+  [1m[36mSection Load (0.5ms)[0m  [1mSELECT "sections".* FROM "sections"[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 1]]
+  [1m[36mAnswer Load (0.9ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 2]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 7]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 3]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 12]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 4]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 13]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 14]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 15]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 16]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 5]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 17]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 18]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 19]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 20]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 21]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 22]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 23]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 24]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 7]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 26]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 27]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 28]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 8]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 29]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 30]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 31]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 126ms (Views: 109.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 17:54:51 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:35:48 +0000
+Processing by WheelsController#new as HTML
+  [1m[35mSection Load (0.6ms)[0m  SELECT "sections".* FROM "sections"
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 1]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 3]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 4]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 2]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 5]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 6]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 7]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 8]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 11]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 4]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 14]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 15]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 16]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 17]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 18]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 19]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 20]]
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 6]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 21]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 22]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 23]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 24]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 7]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 26]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 27]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 28]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 8]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 29]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 30]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 31]]
+  [1m[35mAnswer Load (1.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (131.0ms)
+Completed 200 OK in 202ms (Views: 182.7ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:49 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:35:56 +0000
+Processing by WheelsController#new as HTML
+  [1m[36mSection Load (0.9ms)[0m  [1mSELECT "sections".* FROM "sections"[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 2]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 7]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 3]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 12]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 4]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 13]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 14]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 15]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 16]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 5]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 17]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 18]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 19]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 20]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 21]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 22]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 23]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 24]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 7]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 26]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 27]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 28]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 8]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 29]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 30]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 31]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 100ms (Views: 84.8ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:56 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:35:57 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+Processing by WheelsController#new as HTML
+  [1m[35mSection Load (0.4ms)[0m  SELECT "sections".* FROM "sections"
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 3]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 4]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 6]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 7]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 11]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 4]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 14]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 15]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 16]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 5]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 17]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 18]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 19]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 20]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 6]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 21]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 22]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 23]]
+  [1m[35mAnswer Load (1.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 24]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 7]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 26]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 27]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 28]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 8]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 29]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 30]]
+  [1m[36mAnswer Load (1.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 31]]
+  [1m[35mAnswer Load (1.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 130ms (Views: 109.2ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:36:33 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+Processing by WheelsController#new as HTML
+  [1m[36mSection Load (0.7ms)[0m  [1mSELECT "sections".* FROM "sections"[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 2]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 7]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 3]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 12]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 4]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 13]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 14]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 15]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 16]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 5]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 17]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 18]]
+  [1m[36mAnswer Load (0.9ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 19]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 20]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 21]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 22]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 23]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 24]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 7]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 26]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 27]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 28]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 8]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 29]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 30]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 31]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (81.6ms)
+Completed 200 OK in 101ms (Views: 84.0ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:37:27 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+Processing by WheelsController#new as HTML
+  [1m[35mSection Load (0.5ms)[0m  SELECT "sections".* FROM "sections"
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 3]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 4]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 6]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 7]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 3]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 11]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 14]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 15]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 16]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 17]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 18]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 19]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 20]]
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 6]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 21]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 22]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 23]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 24]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 7]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 26]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 27]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 28]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 8]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 29]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 30]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 31]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 125ms (Views: 108.3ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:38:42 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:39:49 +0000
+Processing by WheelsController#new as HTML
+  [1m[36mSection Load (0.6ms)[0m  [1mSELECT "sections".* FROM "sections"[0m
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 1]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.7ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 2]]
+  [1m[35mAnswer Load (5.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 7]]
+  [1m[36mAnswer Load (1.9ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  [1m[35mQuestion Load (1.9ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 3]]
+  [1m[36mAnswer Load (0.8ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mAnswer Load (0.9ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  [1m[36mAnswer Load (4.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  [1m[35mAnswer Load (1.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 12]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 4]]
+  [1m[35mAnswer Load (4.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 13]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 14]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 15]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 16]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 5]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 17]]
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 18]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 19]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 20]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 21]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 22]]
+  [1m[35mAnswer Load (0.9ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 23]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 24]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 7]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 26]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 27]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 28]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 8]]
+  [1m[35mAnswer Load (0.8ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 29]]
+  [1m[36mAnswer Load (6.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 30]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 31]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (128.7ms)
+Completed 200 OK in 169ms (Views: 126.0ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:49 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:39:50 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:42:47 +0000
+Processing by WheelsController#new as HTML
+  [1m[35mSection Load (0.5ms)[0m  SELECT "sections".* FROM "sections"
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 1]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 3]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 4]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 6]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 7]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 11]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 4]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 14]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 15]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 16]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 5]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 17]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 18]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 19]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 20]]
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 6]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 21]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 22]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 23]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 24]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 7]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 26]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 27]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 28]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 8]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 29]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 30]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 31]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 126ms (Views: 109.3ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:42:48 +0000
+
+
+Started GET "/wheels/new" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+Processing by WheelsController#new as HTML
+  [1m[36mSection Load (0.5ms)[0m  [1mSELECT "sections".* FROM "sections"[0m
+  [1m[35mQuestion Load (1.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 1]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35mAnswer Load (2.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mQuestion Load (1.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 2]]
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 7]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 3]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 12]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 4]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 13]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 14]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 15]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 16]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 5]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 17]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 18]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 19]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 20]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 6]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 21]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 22]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 23]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 24]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1  [["section_id", 7]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 26]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 27]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 28]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."section_id" = $1[0m  [["section_id", 8]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 29]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 30]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 31]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 32]]
+  Rendered wheels/new.html.erb within layouts/application (92.2ms)
+Completed 200 OK in 115ms (Views: 94.1ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/sections.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/wheels.css?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/sections.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/wheels.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-30 18:43:40 +0000
