@@ -12,7 +12,7 @@ require 'spec_helper'
 
 			it 'should display a form' do
 				visit new_wheel_path
-				expect(page).to have_content 'Personal growth & development'	
+				expect(page).to have_content 'Personal growth & development'
 			end	
 
 			it 'should show the wheel with click on "create wheel" button'  do
