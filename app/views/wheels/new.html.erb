@@ -14,14 +14,10 @@
 		  	<div class='question'>
 		 		<h4><%= q.question %></h4>
 		 		<% q.answers.each do |a| %>
-		 			<div class="answer_radio">
-		 				<label>
-		 					<div>
-		 						<%= a.answer_text %>
-		 					</div>
-		 						<%= radio_button_tag "answer[#{q.id}]", a.id %>
-		 				</label>
-		 			</div>
+			 		<div class="answer_radio"><label>
+			 			<div><%= a.answer_text %></div>
+			 			<%= radio_button_tag "answer[#{q.id}]", a.id %>
+			 		</label></div>
 		 		<% end %>
 		 	 </div>
 	 		<% end %>
