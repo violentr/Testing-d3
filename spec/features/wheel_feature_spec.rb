@@ -9,11 +9,7 @@ require 'spec_helper'
 				visit new_wheel_path
 				expect(page).to have_content 'Create your wheel'	
 			end	
-
-			it 'should display a form' do
-				visit new_wheel_path
-				expect(page).to have_content 'Personal growth & development'
-			end	
+				
 
 			it 'should show the wheel with click on "create wheel" button'  do
 				visit new_wheel_path			

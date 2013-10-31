@@ -5,6 +5,7 @@ LifeApp::Application.routes.draw do
     resources :sections
     resources :questions
     resources :answers
+    resources :goals
   end  
 
   root :to => "static#homepage"

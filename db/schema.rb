@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029134800) do
+ActiveRecord::Schema.define(version: 20131031173640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,20 @@ ActiveRecord::Schema.define(version: 20131029134800) do
 
   add_index "answers_wheels", ["answer_id"], name: "index_answers_wheels_on_answer_id", using: :btree
   add_index "answers_wheels", ["wheel_id"], name: "index_answers_wheels_on_wheel_id", using: :btree
+
+  create_table "goals", force: true do |t|
+    t.text     "title"
+    t.integer  "section_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "wheel_id"
+    t.integer  "notes"
+    t.date     "due_date"
+    t.integer  "priority"
+    t.boolean  "completion"
+  end
+
+  add_index "goals", ["section_id"], name: "index_goals_on_section_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.text     "question"
