@@ -13,7 +13,7 @@ class WheelsController < ApplicationController
     @wheel = Wheel.find(params[:id])
     @selected_answer_values = @wheel.answers.map(&:answer_value)
     @selected_answer_id = @wheel.answers.map(&:id)
-    @selected_answers = @wheel.answers.inspect
+    @selected_answers = @wheel.answers
   end
 
   def create
