@@ -26,17 +26,23 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.max(0, y(d.y)); })
     .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
+window.count = 1;
+
 d3.json("flare.json", function(error, root) {
+
   var path = svg.selectAll("path")
       .data(partition.nodes(root))
     .enter().append("path")
       .attr("d", arc)
+      .attr("stroke-width",0.3)
+      // , function(d) { window.count++; return (window.count % 2) * 2 }
       .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
       .on("click", click);
 
   function click(d) {
     console.log(d.name);
-    alert(d.name);
+
+  alert("You chose:" +d.name);
     path.transition()
       .duration(2050)
       .attrTween("d", arcTween(inner_child(d)));
