@@ -8,14 +8,14 @@
 
 
 
-growth = Section.create(section_name: 'Personal growth & development')
-health = Section.create(section_name: 'Health, nutrition & exercise')
-finance = Section.create(section_name: 'Money & finances')
-work = Section.create(section_name: 'Work & career')
-environment = Section.create(section_name: 'Home environment')
-relationship = Section.create(section_name: 'Partner & relationships')
-family = Section.create(section_name: 'Family & friends')
-recreation = Section.create(section_name: 'Fun, recreation & relaxation')
+growth = Section.create(section_name: 'Personal Growth & Development')
+health = Section.create(section_name: 'Health, Nutrition & Exercise')
+finance = Section.create(section_name: 'Money & Finances')
+work = Section.create(section_name: 'Work & Career')
+environment = Section.create(section_name: 'Home Environment')
+relationship = Section.create(section_name: 'Partner & Relationships')
+family = Section.create(section_name: 'Family & Friends')
+recreation = Section.create(section_name: 'Fun, Recreation & Relaxation')
 
 growth.questions.create([{question: 'I regularly participate in activities and learning that grow and expand me.'}, {question: 'I like to challenge and push myself.'}, {question: 'I read at least 1-2 books per month.'},  {question: 'I regularly invest both my time and money in educational materials'}])
 health.questions.create([{question: 'I am satisfied with my general level of health, vitality and well-being.'}, {question: 'I take responsibility for my physical well-being and act accordingly.'}, {question: 'I exercise regularly.'},  {question: 'I consume a nutritious, well-balanced diet.'}])
