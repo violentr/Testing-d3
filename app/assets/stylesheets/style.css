@@ -606,3 +606,73 @@ br {
     list-style:disc;
     margin-left: 25px;
 }
+
+.shareEmail input{
+    width: 339px;
+    height: 18px;
+    border: 1px solid #e1e1e1;
+    background: #FFFFFF;
+    margin-bottom: 5px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #8A9297;
+}
+
+.shareEmail textarea{
+    width: 339px;
+    height: 80px;
+    border: 1px solid #e1e1e1;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #8A9297;
+}
+
+.orange{
+    font: 13px Arial, Helvetica, sans-serif;
+    color: #e98d1d;
+    text-decoration: none;
+}
+
+.methodHeader {
+    padding-bottom: 12px;
+    padding-top: 5px;
+    margin-top: 20px;
+    border-top: 1px solid #e1e1e1;
+
+}
+
+.social img{
+    padding-right: 12px;
+}
+
+.rightsocial {
+    text-align: left;
+    width: 540px;
+    float: right;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #8A9297;
+    padding-right: 30px;
+}
+
+.leftsocial {
+    padding-top: 3px;
+    padding-left: 3px;
+    width: 300px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #8A9297;
+    float:left;
+}
+
+.shareBadge textarea{
+    width: 309px;
+    height: 80px;
+    border: 1px solid #e1e1e1;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #8A9297;
+}
+
+
+.answer_radio {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 40px 50px 0px;
+}
