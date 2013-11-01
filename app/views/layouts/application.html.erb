@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>360 Life - Your Personal Life Balance Well-Being Tool</title>
+	<!-- <link REL="stylesheet" type="text/css" href="public/styles/style.css">
+	<link REL="stylesheet" type="text/css" href="public/styles/reset.css"> -->
+	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+	<meta content="text/javascript" http-equiv="Content-Script-Type">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
+  <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
+ 
+
+	<%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<!-- BEGIN: Main Page -->
+	<div id="container">
+
+		<!-- BEGIN: Header -->
+    	<div id="logo">
+    		Logo goes here
+    	</div>
+
+      <div id="navheader">
+
+        <%= yield :nav_header %>
+      </div>
+
+      <div id="main">
+          
+        <% if current_user %>
+        logged in as <% current_user.email %>
+        <%end%>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+      </div>
+
+     <div id="footer" class="footer-home">
+        <ul id="inside_nav">
+          <li><a href="share.html">Share This Site</a> | </li>
+          <li><a target="_blank" href="../terms-of-use.html">Terms</a> | </li>
+          <li><a target="_blank" href="../franklincovey-privacy-policy.html">Privacy</a> | </li>
+          <li><a target="_blank" href="../office.html">Contact Us</a></li>
+        </ul>
+      </div>
+    	    
+
+</div>
+</body>
+</html>
