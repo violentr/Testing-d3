@@ -16,11 +16,8 @@ class WheelsController < ApplicationController
     @selected_answer_values = @wheel.answers.map(&:answer_value)
     @selected_answer_id = @wheel.answers.map(&:id)
     @selected_answers = @wheel.answers
-    
-    respond_to do |format|
-      format.html
-      format.json #{ render json: @selected_answers.to_json }
-    end
+    @sections =Section.all
+
   end
 
   def create
