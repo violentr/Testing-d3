@@ -9,8 +9,20 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require style
  *= require foundation_and_overrides
  *= require_tree .
  */
 
+
 @import "foundation_and_overrides";
+
+#edit_user input {
+	width: 460px;
+	margin: auto;
+}
+
+#new_user input {
+	width: 460px;
+	margin: auto;
+}

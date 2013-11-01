@@ -1,9 +1,13 @@
-"Your personal wheel"
+<% if user_signed_in? %>
+	"Your personal wheel"
 
-<% @wheel.answers.group_by(&:section).each do |section, answers| %>
-	<%= section.section_name %>
-	<%= answers.map(&:answer_value).inspect %><br>
-	section sum = <%= section_sum = answers.map(&:answer_value).sum %><br>
-<% end %></br>
-
-<%= javascript_include_tag 'z-sanburst-d3' %> 
+		<% @wheel.answers.group_by(&:section).each do |section, answers| %>
+		<%= section.section_name %>
+		<%= answers.map(&:answer_value).inspect %><br>
+		section sum = <%= section_sum = answers.map(&:answer_value).sum %><br>
+	<% end %></br>
+		<%= javascript_include_tag 'z-sanburst-d3' %>
+	<% else %>
+<P> Please Login to see your results </p>
+<% end %>
+<%end %>
