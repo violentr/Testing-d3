@@ -1,6 +1,6 @@
 class WheelsController < ApplicationController
 
-  layout 'questionnaire'
+  layout 'application'
   
 	def index
 	end

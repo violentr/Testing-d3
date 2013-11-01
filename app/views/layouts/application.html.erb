@@ -1,58 +1,60 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>360 Life - Your Personal Life Balance Well-Being Tool</title>
-	<!-- <link REL="stylesheet" type="text/css" href="public/styles/style.css">
-	<link REL="stylesheet" type="text/css" href="public/styles/reset.css"> -->
-	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
-	<meta content="text/javascript" http-equiv="Content-Script-Type">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
-  <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
-  <%= javascript_include_tag "http://d3js.org/d3.v3.min.js" %>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
 
-	<%= csrf_meta_tags %>
-</head>
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
-<body>
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- BEGIN: Main Page -->
-	<div id="container">
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-		<!-- BEGIN: Header -->
-    	<div id="logo">
-    		Logo goes here
-    	</div>
+  	
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
+    <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
+    <%= javascript_include_tag "http://d3js.org/d3.v3.min.js" %>
+ 
+    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
 
-      <div id="navheader">
+    <%= csrf_meta_tags %>
+  </head>
 
-        <%= yield :nav_header %>
-      </div>
+  <body>
+    <nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/">Testing Project</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
-      <div id="main">
-          
-        <% if current_user %>
-        logged in as <% current_user.email %>
-        <%end%>
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="right">
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Empty"%></li>
+      <li class="active"><%= link_to "Empty"%></li>
+      <li class="active"><%= link_to "Login",new_user_session_path %></li>
+      <li class="active"><%= link_to "Sign Up",new_user_password_path %></li>
+    </ul>
+  </section>
+</nav>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+    <%= yield %>
 
-        <%= yield %>
-      </div>
-
-     <div id="footer" class="footer-home">
-        <ul id="inside_nav">
-          <li><a href="share.html">Share This Site</a> | </li>
-          <li><a target="_blank" href="../terms-of-use.html">Terms</a> | </li>
-          <li><a target="_blank" href="../franklincovey-privacy-policy.html">Privacy</a> | </li>
-          <li><a target="_blank" href="../office.html">Contact Us</a></li>
-        </ul>
-      </div>
-    	    
-
-</div>
-</body>
+    
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>

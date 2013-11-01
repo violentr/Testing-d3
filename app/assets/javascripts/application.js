@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
+//= require foundation
 //= require turbolinks
 //= require_tree .
+//= require_self
 
-$(function() {
-	$( "#accordion" ).accordion();
-});
+jQuery(document).foundation();

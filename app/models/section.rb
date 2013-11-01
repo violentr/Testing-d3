@@ -3,5 +3,9 @@ class Section < ActiveRecord::Base
   has_many :goals
   accepts_nested_attributes_for :questions
 
-  answers.map(&:answer_value).sum
+  #answers.map(&:answer_value).sum
+
+  def score
+  end
+
 end
