@@ -19,3 +19,7 @@
 //= require_self
 
 jQuery(document).foundation();
+
+$(function() {
+    $( "#accordion" ).accordion();
+  });
