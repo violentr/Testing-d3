@@ -1,8 +1,1 @@
-{
- "name": "wheel of life",
-   "children": [
-<% @sections.each do |section| %>
-<%= nest(2, {}, section.section_name).to_json.html_safe %>
-<% end %>
-}
-
+<%= nesting_for_sections(@wheel).to_json.html_safe %>

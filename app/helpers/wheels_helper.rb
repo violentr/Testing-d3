@@ -11,5 +11,15 @@ module WheelsHelper
 
 			return nested	
 		end
+
+		def nesting_for_sections(wheel)
+			children = []
+
+			wheel.answers.group_by(&:section).each do |section, answers|
+				children << nest(answers.map(&:answer_value).sum, {}, section.section_name)
+			end
+
+			{ name: 'Wheel of life', children: children }
+		end
 	# end
 end

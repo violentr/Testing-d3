@@ -5,13 +5,5 @@
 	<%= answers.map(&:answer_value).inspect %><br>
 	section sum = <%= section_sum = answers.map(&:answer_value).sum %><br>
 <% end %></br>
-<b> Testing </b>
-<% @sections.each do |section| %>
-</br>
-	<label style="color:blue"><b>  Section:  </b></label>
-<%= section.section_name%>
-
-<% end %>
-
 
 <%= javascript_include_tag 'z-sanburst-d3' %> 
