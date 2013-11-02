@@ -8,23 +8,27 @@
   <meta name="viewport" content="width=device-width">
   <title>Testing Project</title>
 
+  
+
+  	<%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
    	<%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
     <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
     <%= javascript_include_tag "http://d3js.org/d3.v3.min.js" %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= stylesheet_link_tag    "style.css" %>
     <%= stylesheet_link_tag    "application" %>
-    <%= stylesheet_link_tag "jquery-ui.css" %>
+   
     
 
 </head>
 <body>
 
-<div class="contain-to-grid">
+	<div class="contain-to-grid">
 		<nav class="top-bar" role="navigation">
 			<ul class="title-area">
 					<li class="name">
-						<h1><a href="/">Wheel Of Life</a></h1>
+						<h1><%=link_to "Wheel Of Life" ,root_path%></h1>
 					</li>
 				<li class="toggle-topbar menu-icon">
 					<a href="#"><span>Menu</span></a>
@@ -37,53 +41,41 @@
 			      <li class="divider"></li>
 			      <li class="active"><%= link_to "Edit Profile", edit_user_registration_path %></li>
 			      <li class="active"><%= link_to "Log Out",  destroy_user_session_path%></li>
-			      
+			       <li class="active"><%= link_to "Your Results"%></li>
 			    <% else %>
 			      <li class="active"><%= link_to "Login",new_user_session_path %></li>
 			      <li class="active"><%= link_to "Sign Up",new_user_registration_path %></li>
+			      <li class="active"><%= link_to "Take a quizz",new_wheel_path %></li>
 		   		<% end %>
     		</ul>
 				<ul class="left">
 					<li class="has-dropdown">
 							<a href="#">Services</a>
 						<ul class="dropdown">
-							<li><a href="#">Web Design</a></li>
+							<li><%= link_to "Service", static_service_path %></li>
 							<li><a href="#">Graphic Design</a></li>
 							<li><a href="#">Icon Design</a></li>
 							<li><a href="#">WordPress Theme</a></li>
-							<li><a href="service.html">See all &rarr;</a></li>
+							
 						</ul>
 					</li>
 						<li><a href="pricing.html">Pricing</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
 				</ul>
-				<ul class="right">
-					<li class="has-form">
-						<form>
-								<div class="row collapse">
-										<div class="small-8 columns">
-											<input type="search" name="search" placeholder="Input
-												the keyword">
-										</div>
-									<div class="small-4 columns">
-											<a href="#" class="button success">Search</a>
-									</div>
-								</div>
-						</form>
-					</li>
-				</ul>
+				
 			</section>
 		</nav>
 	</div>
 
 		<%= yield %>
-
+		
 		<footer class="footer" role="contentinfo">
 			<div class="large-6 columns footnav">
 					<ul class="inline-list">
 						<li><a href="/">Home</a></li>
 						<li><%= link_to "Service", static_service_path %></li>
+						<li><%=link_to "Wheel Of Life" ,new_wheel_path%> </li>
 						<li><a href="#">Pricing</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Contact</a></li>
