@@ -1,0 +1,22 @@
+</br>
+<div class="row">
+			<div class="large-8 columns"> </div>
+					<div class="large-4 columns">
+						<label class="radius secondary label">
+							Registration Form
+						</label>
+					</br></br>
+						<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			 		 	<%= devise_error_messages! %>
+			  		
+			  		<%= f.email_field :email, placeholder:"Please enter your email ", :autofocus => true %>
+							  <%= f.password_field :password, placeholder:"Please enter your password" %>
+							  <%= f.password_field :password_confirmation,placeholder:"Please confirm your password" %>
+							  <div class="row">
+								  <%= f.submit "Sign up", class: "small button" %>
+									<%= render "users/shared/links" %>
+								</div>
+						<% end %>
+			</div>
+</div>
+				

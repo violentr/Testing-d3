@@ -1,0 +1,16 @@
+<div class="row">
+</br>
+			 <label class="radius secondary label">
+					<b>Forgot your password? Please type your email below, we will send you email with instructions</b>
+					</label></br>
+				</br>
+			<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  		<%= devise_error_messages! %>
+		  <%= f.email_field :email,placeholder:"Please enter your email", :autofocus => true %>
+		  <div class="row">
+		  	<div class="large-12 columns">
+		  		<%= f.submit "Send me password", class: "small button"%>
+					<% end %>
+				</div>
+			</div>
+</div>
