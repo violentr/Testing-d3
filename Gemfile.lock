@@ -43,6 +43,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    concurrent-ruby (1.1.10)
     database_cleaner (1.1.1)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
@@ -54,7 +55,8 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
-    i18n (0.6.5)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
